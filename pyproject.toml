@@ -11,7 +11,7 @@ homepage = "https://toio.io/"
 keywords = ["toio"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 bleak = "0.20.1"
 
 
