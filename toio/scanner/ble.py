@@ -26,7 +26,7 @@ logger = get_toio_logger(__name__)
 
 async def scan(
     num: int, sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
-) -> list[CubeInfo]:
+):
     """Scan the specified number of toio Core Cubes.
 
     The scan is terminated by a timeout.
@@ -46,8 +46,8 @@ async def scan(
 
 
 async def scan_with_id(
-    cube_id: set[str], sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
-) -> list[CubeInfo]:
+    cube_id, sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
+):
     """Scan toio Core Cubes with specified id.
 
     The scan is terminated by a timeout.
@@ -67,8 +67,8 @@ async def scan_with_id(
 
 
 async def scan_with_address(
-    address: set[str], sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
-) -> list[CubeInfo]:
+    address, sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
+):
     """Scan toio Core Cubes with specified BLE address.
 
     The scan is terminated by a timeout.
@@ -89,7 +89,7 @@ async def scan_with_address(
 
 async def scan_registered_cubes(
     num: int, sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
-) -> list[CubeInfo]:
+):
     """Scan toio Core Cubes registered with Windows
 
     This function only works on Windows platform.
@@ -120,8 +120,8 @@ async def scan_registered_cubes(
 
 
 async def scan_registered_cubes_with_id(
-    cube_id: set[str], sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
-) -> list[CubeInfo]:
+    cube_id, sort: SortKey = "rssi", timeout: float = DEFAULT_SCAN_TIMEOUT
+):
     """Scan toio Core Cube specified by the cube_id registered with Windows
 
     This function only works on Windows platform.

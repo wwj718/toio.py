@@ -103,9 +103,9 @@ class ScannerInterface(metaclass=ABCMeta):
     async def scan(
         self,
         num: Optional[int] = None,
-        cube_id: Optional[set[str]] = None,
-        address: Optional[set[str]] = None,
+        cube_id: Any = None,
+        address: Any = None,
         sort: SortKey = None,
         timeout: float = DEFAULT_SCAN_TIMEOUT,
-    ) -> list[CubeInfo]:
+    ) -> Any:
         raise NotImplementedError()

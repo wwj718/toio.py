@@ -114,7 +114,7 @@ class ToioCoreCube(CubeInterface):
         return await self.interface.unregister_notification_handler(uuid)
 
 
-__all__: tuple[str, ...] = (
+__all__ = (
     "ToioCoreCube",
     # .api
     "ToioCoreCubeLowLevelAPI",

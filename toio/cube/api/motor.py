@@ -238,7 +238,7 @@ class MotorControlMultipleTargets(CubeCommand):
         movement_type: MovementType,
         speed: Speed,
         mode: WriteMode,
-        target_list: list[TargetPosition],
+        target_list,
     ):
         self.timeout = clip(timeout, 0, 255)
         self.movement_type = movement_type
@@ -527,7 +527,7 @@ class Motor(CubeCharacteristic):
         movement_type: MovementType,
         speed: Speed,
         mode: WriteMode,
-        target_list: list[TargetPosition],
+        target_list,
     ) -> None:
         """
         Send multiple target specified motor control command

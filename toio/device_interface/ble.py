@@ -98,11 +98,11 @@ class BleScanner(ScannerInterface):
     async def scan(
         self,
         num: Optional[int] = None,
-        cube_id: Optional[set[str]] = None,
-        address: Optional[set[str]] = None,
+        cube_id = None,
+        address = None,
         sort: SortKey = None,
         timeout: float = DEFAULT_SCAN_TIMEOUT,
-    ) -> list[CubeInfo]:
+    ):
         """Scan toio Core Cubes.
         Argument 'num', 'cube_id', and 'address' is exclusive.
 

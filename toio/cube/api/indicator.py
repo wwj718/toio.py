@@ -99,7 +99,7 @@ class RepeatedTurningOnAndOff(CubeCommand):
     def __init__(
         self,
         repeat: int,
-        param_list: Union[list[IndicatorParam], tuple[IndicatorParam, ...]],
+        param_list,
     ) -> None:
         self.repeat = repeat
         self.param_list = param_list
@@ -182,7 +182,7 @@ class Indicator(CubeCharacteristic):
     async def repeated_turn_on(
         self,
         repeat: int,
-        param_list: Union[list[IndicatorParam], tuple[IndicatorParam, ...]],
+        param_list,
     ) -> None:
         """
         Send repeated indicator turning on / off command

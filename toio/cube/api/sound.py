@@ -241,7 +241,7 @@ class PlayMidi(CubeCommand):
     _payload_id = 0x03
     _converter = struct.Struct("<BBB")
 
-    def __init__(self, repeat: int, notes: Union[list[MidiNote], tuple[MidiNote, ...]]):
+    def __init__(self, repeat: int, notes):
         self.repeat = repeat
         self.notes = notes
 
@@ -294,7 +294,7 @@ class Sound(CubeCharacteristic):
         await self._write(bytes(sound_effect))
 
     async def play_midi(
-        self, repeat: int, midi_notes: Union[list[MidiNote], tuple[MidiNote, ...]]
+        self, repeat: int, midi_notes
     ):
         """
         Send play midi note command
