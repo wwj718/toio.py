@@ -2,6 +2,10 @@
 
 **Supports Python 3.8 and later versions**
 
+install: `pip install https://github.com/wwj718/toio.py/archive/refs/heads/main.zip`
+
+---
+
 [![PyPI](https://img.shields.io/pypi/v/toio-py?color=00aeca)](https://pypi.org/project/toio-py/)
 
 This is a library for controlling [toio™Core Cube](https://toio.io/platform/cube/) from Python.
