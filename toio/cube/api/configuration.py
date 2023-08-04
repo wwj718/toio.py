@@ -10,7 +10,7 @@
 import pprint
 import struct
 from enum import IntEnum
-from typing import Optional, TypeAlias, Union
+from typing import Optional, Any, Union
 
 from toio.cube.api.base_class import CubeCharacteristic, CubeCommand, CubeResponse
 from toio.device_interface import CubeInterface, GattReadData
@@ -414,7 +414,7 @@ class ResponsePostureAngleDetectionSettings(CubeResponse):
         return pprint.pformat(vars(self))
 
 
-ConfigurationResponseType: TypeAlias = Union[
+ConfigurationResponseType: Any = Union[
     ProtocolVersion,
     ResponseIdNotificationSettings,
     ResponseIdMissedNotificationSettings,

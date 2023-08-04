@@ -11,7 +11,7 @@ import pprint
 import struct
 from dataclasses import dataclass
 from enum import Enum, IntEnum
-from typing import Optional, TypeAlias, Union
+from typing import Optional, Any, Union
 
 from toio.cube.api.base_class import CubeCharacteristic, CubeCommand, CubeResponse
 from toio.device_interface import CubeInterface, GattReadData
@@ -451,7 +451,7 @@ class ResponseMotorSpeed(CubeResponse):
         return pprint.pformat(vars(self))
 
 
-MotorResponseType: TypeAlias = Union[
+MotorResponseType: Any = Union[
     ResponseMotorControlTarget, ResponseMotorControlMultipleTargets, ResponseMotorSpeed
 ]
 """

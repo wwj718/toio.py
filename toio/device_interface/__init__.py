@@ -18,7 +18,9 @@ The abstract base classes defined are as follows:
 """
 
 from abc import ABCMeta, abstractmethod
-from typing import Awaitable, Callable, Literal, NamedTuple, Optional, TypeAlias, Union
+# from typing import Awaitable, Callable, Literal, NamedTuple, Optional, Any, Union
+from typing import NamedTuple, Optional, Literal
+from typing import Any
 from uuid import UUID
 
 from bleak.backends.characteristic import BleakGATTCharacteristic
@@ -27,12 +29,10 @@ from bleak.backends.scanner import AdvertisementData
 
 DEFAULT_SCAN_TIMEOUT = 5.0
 
-GattReadData: TypeAlias = bytearray
-GattWriteData: TypeAlias = Union[bytes, bytearray, memoryview]
-GattCharacteristic: TypeAlias = BleakGATTCharacteristic
-GattNotificationHandler: TypeAlias = Callable[
-    [GattCharacteristic, bytearray], Union[None, Awaitable[None]]
-]
+GattReadData: Any = None
+GattWriteData: Any = None
+GattCharacteristic: Any = None
+GattNotificationHandler: Any = None
 
 
 class CubeInterface(metaclass=ABCMeta):

@@ -10,7 +10,7 @@
 import pprint
 import struct
 from enum import IntEnum
-from typing import Optional, TypeAlias, Union
+from typing import Optional, Any, Union
 
 from toio.cube.api.base_class import CubeCharacteristic, CubeCommand, CubeResponse
 from toio.device_interface import CubeInterface, GattReadData
@@ -244,7 +244,7 @@ class MagneticSensorData(CubeResponse):
             raise TypeError("wrong payload")
 
 
-SensorResponseType: TypeAlias = Union[
+SensorResponseType: Any = Union[
     MotionDetectionData,
     PostureAngleEulerData,
     PostureAngleQuaternionsData,

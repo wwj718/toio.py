@@ -9,7 +9,7 @@
 
 import pprint
 from enum import IntEnum
-from typing import Optional, TypeAlias
+from typing import Optional, Any
 
 from toio.cube.api.base_class import CubeCharacteristic, CubeResponse
 from toio.device_interface import CubeInterface, GattReadData
@@ -55,7 +55,7 @@ class ButtonInformation(CubeResponse):
         return pprint.pformat(vars(self))
 
 
-ButtonResponseType: TypeAlias = ButtonInformation
+ButtonResponseType: Any = ButtonInformation
 """
 Response type of button characteristic
 """
