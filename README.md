@@ -1,5 +1,7 @@
 ﻿# toio.py
 
+**Supports Python 3.8 and later versions**
+
 [![PyPI](https://img.shields.io/pypi/v/toio-py?color=00aeca)](https://pypi.org/project/toio-py/)
 
 This is a library for controlling [toio™Core Cube](https://toio.io/platform/cube/) from Python.
@@ -11,7 +13,6 @@ Based on [toio Core Cube Specifications](https://toio.github.io/toio-spec/en/) v
 ## Features
 
 - Uses [bleak](https://github.com/hbldh/bleak) for Bluetooth communication
-- Supports Python 3.11 and later versions
 - Multi-platform (Windows, Linux, macOS)
 - No dedicated Bluetooth dongle required
 - Asynchronous API (ToioCoreCube API) based on the toio Core Cube Specifications and synchronous API (SimpleCube API) for easy cube control
